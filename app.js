@@ -1,5 +1,6 @@
 let path = require('path'),
 	express = require('express'),
+	app = express(),
 	session = require('express-session'),
 	MongoStore = require('connect-mongo')(session),
 	flash = require('connect-flash'),
@@ -81,12 +82,17 @@ app.use(expressWinston.errorLogger({
 			colorize: true
 		}),
 		new winston.transports.File({
-			filename:'logs/error.log'
+			filename: 'logs/error.log'
 		})
 	]
 }));
 
 
-app.listen(config.port, () => {
-	console.log(`${pkg.name} listening on port ${config.port}`);
-});
+if (module.parent) {
+	module.exports = app;
+} else {
+	// 监听启动程序
+	app.listen(config.port, () => {
+		console.log(`${pkg.name} listening on port ${config.port}`);
+	});
+}
