@@ -1,6 +1,11 @@
 <%- include('header') %>
 
-<%- include('components/post-content') %>
+<div class="detail-content">
+	<h3><%= post.title %></h3>
+	<div class="post-info">
+		<%- post.content %>
+	</div>
+</div>
 <%- include('components/comments') %>
 
 <%- include('footer') %>

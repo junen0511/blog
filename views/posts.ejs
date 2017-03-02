@@ -1,7 +1,26 @@
 <%- include('header') %>
 
-<% posts.forEach(function (post) { %>
-  <%- include('components/post-content', { post: post }) %>
-<% }) %>
-
+<div class="row post-list">
+	<% posts.forEach(function (post) { %>
+	<div class="col-lg-4 post-item">
+		<h3>
+			<a href="/posts/<%= post._id %>"><%= post.title %></a>
+		</h3>
+		<div class="post-info"><%- post.content %></div>
+		<div class="item-ctrl">
+			<span class="btn btn-secondary">浏览(<%= post.pv %>)</span>
+			<% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
+			<span class="dropdown">
+				<a href="javascript:void(0);" class="btn btn-info dropdown-toggle" id="itemDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">留言(<%= post.commentsCount %>)</a>
+				<div class="dropdown-menu" aria-labelledby="itemDropdown">
+					<a class="dropdown-item" href="/posts/<%= post._id %>/edit">编辑</a>
+					<a class="dropdown-item" href="/posts/<%= post._id %>/remove">删除</a>
+				</div>
+			</span>
+			<% } else {%>
+				<span class="btn btn-info">留言(<%= post.commentsCount %>)</span>
+			<% } %>
+		</div>
+	</div>
+	<% }) %></div>
 <%- include('footer') %>

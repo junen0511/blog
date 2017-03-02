@@ -1,4 +1,6 @@
 <%- include('header') %>
-	<h2><%= error.message %></h2>
-    <p><%= error.stack %></p>
+<div class="alert alert-warning" role="alert"> 
+	<strong><%= error.message %></strong>
+	<br><%= error.stack %>
+</div>
 <%- include('footer') %>

@@ -8,7 +8,8 @@ let path = require('path'),
 	routers = require('./routes'),
 	pkg = require('./package'),
 	winston = require('winston'),
-	expressWinston = require('express-winston');
+	expressWinston = require('express-winston'),
+	app = express();
 
 // 设置模板路径
 app.set('views', path.join(__dirname, 'views'));
@@ -81,12 +82,17 @@ app.use(expressWinston.errorLogger({
 			colorize: true
 		}),
 		new winston.transports.File({
-			filename:'logs/error.log'
+			filename: 'logs/error.log'
 		})
 	]
 }));
 
 
-app.listen(config.port, () => {
-	console.log(`${pkg.name} listening on port ${config.port}`);
-});
+if (module.parent) {
+	module.exports = app;
+} else {
+	// 监听启动程序
+	app.listen(config.port, () => {
+		console.log(`${pkg.name} listening on port ${config.port}`);
+	});
+}

@@ -27,7 +27,7 @@ router.post('/', checkNotLogin, (req, res, next) => {
 		if (!(name.length >= 1 && name.length <= 10)) {
 			throw new Error('名字请限制在1-10个字符');
 		}
-		if (!(gender in ['m', 'f', 'x'])) {
+		if (['m', 'f', 'x'].indexOf(gender) === -1) {
 			throw new Error('性别只能是m，f或x');
 		}
 		if (!(bio.length >= 1 && bio.length <= 30)) {

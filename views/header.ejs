@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title><%= blog.title %></title>
-  <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
-</head>
+  <link rel="stylesheet" type="text/css" href="/css/blog-ui.css"></head>
 <body>
-  <%- include('components/nav') %>
-  <%- include('components/nav-setting') %>
-  <%- include('components/notification') %>
+  <div class="container">
+  	<header class="header">
+		<h3 class="text-muted"><%= blog.title %></h3>
+    	<p><%= blog.description %></p>
+	</header>
+    <%- include('components/nav') %>
+    <%- include('components/notification') %>
+  

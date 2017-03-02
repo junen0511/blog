@@ -1,17 +1,22 @@
 <%- include('header') %>
 
-<div class="ui grid">
-	<div class="four wide column"></div>
-	<div class="eight wide column">
-		<form class="ui form segment" method="post">
-			<div class="field required">
-				<label>用户名</label>
-				<input placeholder="用户名" type="text" name="name"></div>
-			<div class="field required">
-				<label>密码</label>
-				<input placeholder="密码" type="password" name="password"></div>
-			<input type="submit" class="ui button fluid" value="登录"></div>
-	</form>
-</div>
+<form class="signin-form" method="post">
+	<div class="form-group row">
+		<label for="nameTxt" class="col-3 col-form-label">用户名</label>
+		<div class="col-9">
+			<input class="form-control" type="text" name="name" value="" id="nameTxt" placeholder="请输入用户名"></div>
+	</div>
+	<div class="form-group row">
+		<label for="passWordTxt" class="col-3 col-form-label">密码</label>
+		<div class="col-9">
+			<input class="form-control" type="password" name="password" value="" id="passWordTxt" placeholder="请输入密码"></div>
+	</div>
+	<div class="form-group row">
+		<label for="" class="col-3 col-form-label"></label>
+		<div class="col-9">
+			<button type="submit" class="btn btn-success btn-block">登录</button>
+		</div>
+	</div>
+</form>
 
 <%- include('footer') %>
