@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>blog-signin</title>
+  <link rel="stylesheet" type="text/css" href="../css/blog-ui.css"></head>
+<body>
+  <div class="container">
+    <div class="masthead">
+      <h3 class="text-muted">My Blog</h3>
+      <nav class="navbar navbar-light bg-faded rounded">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-toggleable-md" id="navbarCollapse">
+          <ul class="nav navbar-nav text-md-center justify-content-md-between">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                个人主页
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                发表文章
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                退出
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- user login -->
+    <form class="signin-form">
+      <div class="form-group row">
+        <label for="nameTxt" class="col-3 col-form-label">用户名</label>
+        <div class="col-9">
+          <input class="form-control" type="text" name="name" value="" id="nameTxt" placeholder="请输入用户名"></div>
+      </div>
+      <div class="form-group row">
+        <label for="passWordTxt" class="col-3 col-form-label">密码</label>
+        <div class="col-9">
+          <input class="form-control" type="password" name="password" value="" id="passWordTxt" placeholder="请输入密码"></div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-3 col-form-label"></label>
+        <div class="col-9">
+          <button type="submit" class="btn btn-success btn-block">登录</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Site footer -->
+    <footer class="footer">
+      <p>&copy; Company 2017</p>
+    </footer>
+
+  </div>
+  <!-- /container -->
+
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+</body>
+</html>

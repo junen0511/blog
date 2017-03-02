@@ -1,10 +1,10 @@
 let path = require('path'),
   assert = require('assert'),
   request = require('supertest'),
-  app = require('../index'),
+  app = require('../app'),
   User = require('../lib/mongo').User,
   testName1 = 'testName1',
-  testName2 = 'nswbmw';
+  testName2 = 'junen';
 
 describe('signup', () => {
   describe('POST /signup', () => {

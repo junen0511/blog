@@ -1,11 +1,15 @@
 @charset "UTF-8";
-.icon-sprite, .icon-alipay {
-  background-image: url('/icon-s4f4ed68da3.png');
+.icon-sprite, .icon-forget57, .icon-ok-log {
+  background-image: url('/icon-s18d5bb5669.png');
   background-repeat: no-repeat;
 }
 
-.icon-alipay {
+.icon-forget57 {
   background-position: 0 0;
+}
+
+.icon-ok-log {
+  background-position: 0 -62px;
 }
 
 /* CSS重置 */

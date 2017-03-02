@@ -1,6 +1,5 @@
 let path = require('path'),
 	express = require('express'),
-	app = express(),
 	session = require('express-session'),
 	MongoStore = require('connect-mongo')(session),
 	flash = require('connect-flash'),
@@ -9,7 +8,8 @@ let path = require('path'),
 	routers = require('./routes'),
 	pkg = require('./package'),
 	winston = require('winston'),
-	expressWinston = require('express-winston');
+	expressWinston = require('express-winston'),
+	app = express();
 
 // 设置模板路径
 app.set('views', path.join(__dirname, 'views'));
