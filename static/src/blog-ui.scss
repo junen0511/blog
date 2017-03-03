@@ -1,8 +1,22 @@
 @charset "UTF-8";
 @import 'bootstrap';
 
-.header{
+.header {
 	padding: 2rem;
+
+	.avatar {
+		width: 6rem;
+		height: 6rem;
+		display: block;
+		overflow: hidden;
+		line-height: 6rem;
+		text-align: center;
+
+		img {
+			max-width: 100%;
+			vertical-align: middle;
+		}
+	}
 }
 .footer {
 	margin-top: 2rem;
@@ -43,7 +57,7 @@
 	}
 }
 .post-list {
-	.post-item{
+	.post-item {
 		margin-top: 2rem;
 	}
 	.item-ctrl {
@@ -54,12 +68,13 @@
 			cursor: pointer;
 		}
 	}
-	.post-info{
+	.post-info {
 		max-height: 280px;
 		overflow: hidden;
-		margin-bottom:1rem;
-		p{
-			margin:0;
+		margin-bottom: 1rem;
+
+		p {
+			margin: 0;
 		}
 	}
 }
@@ -68,11 +83,12 @@
 		font-size: 1rem;
 	}
 }
-.signup-form{
-	.form-check-label{
+.signup-form {
+	.form-check-label {
 		margin-right: 1rem;
-		input{
-			vertical-align: 2px;;
+
+		input {
+			vertical-align: 2px;
 			margin-right: 2px;
 		}
 	}

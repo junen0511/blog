@@ -7,36 +7,41 @@
 	<link rel="stylesheet" type="text/css" href="../css/blog-ui.css"></head>
 <body>
 	<div class="container">
-		<div class="masthead">
-			<h3 class="text-muted">My Blog</h3>
-			<nav class="navbar navbar-light bg-faded rounded">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-toggleable-md" id="navbarCollapse">
-					<ul class="nav navbar-nav text-md-center justify-content-md-between">
-						<li class="nav-item active">
-							<a class="nav-link" href="#">
-								个人主页
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								发表文章
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								退出
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+		<header class="header row">
+      <div class="col-lg-2"> <i class="avatar" data-toggle="tooltip" data-placement="bottom" title="junen|保密|帅"><img src="../img/upload_59a8edc210a2ab2472cd8a5924bf7c76.jpg"></i>
+      </div>
+      <div class="col-lg-10">
+        <h3 class="text-muted">Junen</h3>
+        <p>我是一个前端攻城狮</p>
+      </div>
+    </header>
+    <nav class="navbar navbar-light bg-faded rounded">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-toggleable-md" id="navbarCollapse">
+        <ul class="nav navbar-nav text-md-center justify-content-md-between">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              个人主页
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              发表文章
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              退出
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 		<!-- 发表文章 -->
 		<form class="add-post-form">
 			<div class="form-group">
@@ -60,6 +65,12 @@
 	<!-- /container -->
 
 	<script src="../js/jquery-3.1.1.min.js"></script>
-	<script src="../js/bootstrap.js"></script>
+  <script src="../js/tether.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
 </body>
 </html>
